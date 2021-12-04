@@ -2,8 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import { Router } from 'express'
 
-import ProductController from './controller/ProductController.js'
-import verifyIfProductExists from './middleware/ProductMiddleware.js'
+import ProductController from './src/product/controller/ProductController.js'
+import verifyIfProductExists from './src/product/middleware/ProductMiddleware.js'
 
 mongoose.connect("mongodb://localhost:27017/product", { useNewUrlParser: true, useUnifiedTopology: true });
 
