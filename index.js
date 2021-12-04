@@ -2,7 +2,6 @@ import express from 'express'
 import mongoose from 'mongoose'
 import { Router } from 'express'
 
-import product from './models/product.js'
 import ProductController from './controller/ProductController.js'
 import verifyIfProductExists from './middleware/ProductMiddleware.js'
 
@@ -18,5 +17,7 @@ router.get('/', ProductController.index)
 router.post('/create', ProductController.create)
 router.put('/update/:id',verifyIfProductExists, ProductController.update)
 router.delete('/delete/:id', verifyIfProductExists, ProductController.delete)
+router.get('/convertcsv', ProductController.convertCSV)
+
 
 export default app
