@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+const mongoose = require("mongoose");
 
 const product = new mongoose.Schema({
   name: String,
   price: String,
   description: String,
-  categorie: String
-})
+  categorie: String,
+});
 
-export default product
+module.exports = product;
